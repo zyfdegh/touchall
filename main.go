@@ -16,7 +16,7 @@ func touchAll(baseDir string) {
 	files := listFiles(baseDir)
 	for _, file := range files {
 		absPath := filepath.Join(baseDir, file.Name())
-		log.Printf("abs path: %s", absPath)
+		log.Printf("touch %s\n", absPath)
 		if file.IsDir() {
 			touchAll(absPath)
 		}
